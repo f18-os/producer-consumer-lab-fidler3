@@ -17,6 +17,7 @@ queue1 = []
 # need two queues
 queue2 = []
 
+producerdone = False
 #maximum size of queue, variable allows for quick changes
 MAX_NUM = 10
 
@@ -65,6 +66,7 @@ class ConsumerOne(Thread):
     def run(self):
         global queue1
         global queue2
+        global producerdone
         count = 0
         inputFrame = 1
         while inputFrame is not None:
